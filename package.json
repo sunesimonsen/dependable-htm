@@ -1,0 +1,67 @@
+{
+  "type": "module",
+  "name": "@dependable/htm",
+  "version": "0.1.1",
+  "description": "Construct @dependable/view vdom using template literals",
+  "author": "Sune Simonsen",
+  "license": "MIT",
+  "module": "./src/html.js",
+  "exports": {
+    ".": "./src/html.js"
+  },
+  "files": [
+    "dist",
+    "src",
+    "types"
+  ],
+  "keywords": [
+    "dependable",
+    "view",
+    "html",
+    "htm"
+  ],
+  "scripts": {
+    "api-docs": "npm run types && typedoc --out api-docs --hideLegend --hideGenerator src/shared.d.ts src/html.js",
+    "build": "rm -rf dist types && npm run types && rollup -c rollup.config.js",
+    "coverage": "c8 -r lcov -r text npm test",
+    "format": "prettier --write '**/*.{js,mjs,md,json}'",
+    "lint": "eslint '**/*.{js,mjs}' && prettier --check '**/*.{js,mjs,md,json}'",
+    "prepublishOnly": "npm run build",
+    "publish-docs": "npm run api-docs && surge api-docs dependable-htm-api.surge.sh",
+    "test": "mocha",
+    "types": "tsc && cp ./src/shared.d.ts ./types"
+  },
+  "bugs": "https://github.com/sunesimonsen/dependable-htm/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sunesimonsen/dependable-htm"
+  },
+  "dependencies": {
+    "@dependable/view": ">= 0.19",
+    "htm": "^3.1.1"
+  },
+  "devDependencies": {
+    "c8": "^7.11.3",
+    "eslint": "^8.30.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-mocha": "^10.1.0",
+    "mocha": "^10.2.0",
+    "mocha-dominate": "^2.0.0",
+    "prettier": "^3.0.3",
+    "rollup": "^2.27.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "sinon": "^14.0.0",
+    "surge": "^0.23.1",
+    "terser": "^5.14.0",
+    "typedoc": "^0.22.17",
+    "typescript": "^4.7.3",
+    "unexpected": "^12.0.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
