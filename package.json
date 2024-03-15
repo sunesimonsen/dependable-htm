@@ -46,7 +46,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-mocha": "^10.1.0",
-    "mocha": "^10.2.0",
+    "mocha": "^10.3.0",
     "mocha-dominate": "^2.0.0",
     "prettier": "^3.0.3",
     "rollup": "^2.27.1",
