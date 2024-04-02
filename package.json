@@ -9,18 +9,10 @@
   "exports": {
     ".": "./src/html.js"
   },
-  "files": [
-    "dist",
-    "src",
-    "types"
-  ],
-  "keywords": [
-    "dependable",
-    "view",
-    "html",
-    "htm"
-  ],
+  "files": ["dist", "src", "types"],
+  "keywords": ["dependable", "view", "html", "htm"],
   "scripts": {
+    "check-bundle-size": "bundlesize",
     "api-docs": "npm run types && typedoc --out api-docs --hideLegend --hideGenerator src/shared.d.ts src/html.js",
     "build": "rm -rf dist types && npm run types && rollup -c rollup.config.js",
     "coverage": "c8 -r lcov -r text npm test",
@@ -42,6 +34,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^11.0.0",
+    "bundlesize": "^0.18.2",
     "c8": "^7.11.3",
     "eslint": "^8.30.0",
     "eslint-config-prettier": "^8.5.0",
@@ -64,5 +57,11 @@
   },
   "engines": {
     "node": ">=18"
-  }
+  },
+  "bundlesize": [
+    {
+      "path": "./dist/dependable-htm.esm.min.js",
+      "maxSize": "750B"
+    }
+  ]
 }

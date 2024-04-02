@@ -23,3 +23,6 @@ jobs:
       - name: Lint
         if: ${{ matrix.node-version == 18 }}
         run: npm run lint
+      - name: Bundle size
+        if: ${{ matrix.node-version == 18 }}
+        run: npm run build && npm run check-bundle-size
