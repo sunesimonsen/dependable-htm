@@ -1,7 +1,6 @@
 # @dependable/htm
 
 [![Checks](https://github.com/sunesimonsen/dependable-htm/workflows/CI/badge.svg)](https://github.com/sunesimonsen/dependable-htm/actions?query=workflow%3ACI+branch%3Amain)
-[![Bundle Size](https://img.badgesize.io/https:/unpkg.com/@dependable/htm/dist/dependable-htm.esm.min.js?label=gzip&compression=gzip)](https://unpkg.com/@dependable/htm/dist/dependable-htm.esm.min.js)
 
 Create VDom for
 [@dependable/view](https://github.com/sunesimonsen/dependable-view) from a
