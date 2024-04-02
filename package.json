@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@dependable/htm",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Construct @dependable/view vdom using template literals",
   "author": "Sune Simonsen",
   "license": "MIT",
@@ -9,8 +9,17 @@
   "exports": {
     ".": "./src/html.js"
   },
-  "files": ["dist", "src", "types"],
-  "keywords": ["dependable", "view", "html", "htm"],
+  "files": [
+    "dist",
+    "src",
+    "types"
+  ],
+  "keywords": [
+    "dependable",
+    "view",
+    "html",
+    "htm"
+  ],
   "scripts": {
     "api-docs": "npm run types && typedoc --out api-docs --hideLegend --hideGenerator src/shared.d.ts src/html.js",
     "build": "rm -rf dist types && npm run types && rollup -c rollup.config.js",
