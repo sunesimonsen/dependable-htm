@@ -45,7 +45,7 @@
     "@rollup/plugin-node-resolve": "^11.0.0",
     "bundlesize": "^0.18.2",
     "c8": "^7.11.3",
-    "eslint": "^8.30.0",
+    "eslint": "^9.2.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-mocha": "^10.1.0",
